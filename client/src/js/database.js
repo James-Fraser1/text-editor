@@ -25,7 +25,7 @@ export const putDb = async (content) => {
   // Const used to with "await" to check for request
   const result = await request;
 
-  console.log(result);
+  return result?.value;
   // console.error('putDb not implemented');
 }
 
