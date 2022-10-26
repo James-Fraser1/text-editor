@@ -22,11 +22,11 @@ export const putDb = async (content) => {
   const store = tx.objectStore('jate');
   // Const used to apply the "add" method into the object store along with passing in the content
   const request = store.add(content);
-  // 
-
-  // 
+  // Const used to with "await" to check for request
+  const result = await request;
 
   console.error('putDb not implemented');
+  console.log(result);
 }
 
 // TODO: Add logic for a method that gets all the content from the database
@@ -39,10 +39,10 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
   // Cost used to apply the "getAll" method to populate all data into the database
   const request = store.getAll();
-  // 
+  // Const used to with "await" to check for request
+  const result = await request;
 
-  // 
-
-  console.error('getDb not implemented');
+  console.error('getDb not implemented',);
+  console.log(result)
 }
 initdb();
