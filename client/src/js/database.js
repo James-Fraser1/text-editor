@@ -18,6 +18,10 @@ export const putDb = async (content) => {
   const jateDb = await openDB('jate', 1);
   // Const used to create a new transaction with "jate" and "readwrite" requirements
   const tx = jateDb.transaction('jate', 'readwrite');
+  // Const used to create a pathway to the objectStore
+  const store = tx.objectStore('jate');
+  // Const used to apply the "add" method into the object store along with passing in the content
+  const request = store.add(content);
   // 
 
   // 
@@ -31,6 +35,10 @@ export const getDb = async () => {
   const jateDb = await openDB('jate', 1);
   // Const used to create a new transaction with "jate" requirement
   const tx = jateDb.transaction('jate');
+  // Const used to create a pathway to the objectStore
+  const store = tx.objectStore('jate');
+  // Cost used to apply the "getAll" method to populate all data into the database
+  const request = store.getAll();
   // 
 
   // 
