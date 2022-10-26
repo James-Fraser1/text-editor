@@ -25,8 +25,8 @@ export const putDb = async (content) => {
   // Const used to with "await" to check for request
   const result = await request;
 
-  console.error('putDb not implemented');
   console.log(result);
+  // console.error('putDb not implemented');
 }
 
 // TODO: Add logic for a method that gets all the content from the database
@@ -42,7 +42,7 @@ export const getDb = async () => {
   // Const used to with "await" to check for request
   const result = await request;
 
-  console.error('getDb not implemented',);
   console.log(result)
+  // console.error('getDb not implemented',);
 }
 initdb();
