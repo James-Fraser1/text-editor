@@ -21,7 +21,7 @@ export const putDb = async (content) => {
   // Const used to create a pathway to the objectStore
   const store = tx.objectStore('jate');
   // Const used to apply the "add" method into the object store along with passing in the content
-  const request = store.add(content);
+  const request = store.put({id: 1, value: content});
   // Const used to with "await" to check for request
   const result = await request;
 
